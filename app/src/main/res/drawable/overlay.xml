@@ -1,0 +1,5 @@
+<!-- Example: res/drawable/my_shape_overlay.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/>
+    <corners android:radius="140dp"/>
+</shape>
