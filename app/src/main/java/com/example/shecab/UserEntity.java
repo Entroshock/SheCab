@@ -13,41 +13,45 @@ public class UserEntity {
     @ColumnInfo (name = "userId")
     String userId;
 
-    @ColumnInfo (name = "password")
-    String password;
+    @ColumnInfo (name = "userPassword")
+    String userPassword;
 
-    @ColumnInfo (name = "email")
-    String email;
+    @ColumnInfo (name = "userEmail")
+    String userEmail;
 
-    @ColumnInfo (name = "phone")
-    String phone;
+    @ColumnInfo (name = "userPhone")
+    String userPhone;
 
-
-
-
-
-
-    public String getPassword() {
-        return password;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
+
+
+
+
+
+
+
+
+
 }

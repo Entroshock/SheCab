@@ -29,9 +29,9 @@ public class CreateAccountActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Create User
                 UserEntity userEntity = new UserEntity();
-                userEntity.setEmail(userEmail.getText().toString());
-                userEntity.setPassword(userPassword.getText().toString());
-                userEntity.setPhone(userPhone.getText().toString());
+                userEntity.setUserEmail(userEmail.getText().toString());
+                userEntity.setUserPassword(userPassword.getText().toString());
+                userEntity.setUserPhone(userPhone.getText().toString());
 
                 if (validateInput(userEntity)){
                     // Do insert Operation
@@ -61,9 +61,9 @@ public class CreateAccountActivity extends AppCompatActivity {
     }
 
     private Boolean validateInput(UserEntity userEntity) {
-        if (userEntity.getEmail().isEmpty() ||
-            userEntity.getPassword().isEmpty() ||
-            userEntity.getPhone().isEmpty())
+        if (userEntity.getUserEmail().isEmpty() ||
+            userEntity.getUserPassword().isEmpty() ||
+            userEntity.getUserPhone().isEmpty())
         {
             return false;
         }
