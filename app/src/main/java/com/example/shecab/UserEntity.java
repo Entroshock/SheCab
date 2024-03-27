@@ -10,8 +10,7 @@ public class UserEntity {
     @PrimaryKey(autoGenerate = true)
     Integer id;
 
-    @ColumnInfo (name = "userId")
-    String userId;
+
 
     @ColumnInfo (name = "userPassword")
     String userPassword;
