@@ -6,19 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.shecab.R;
 
 public class CreateAccountActivity extends AppCompatActivity {
-    EditText userEmail, userPassword, userConfirmPassword, userPhone;
+    EditText userEmail, userPassword, userPhone;
     Button register;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
         userEmail = findViewById(R.id.userEmail);
         userPassword = findViewById(R.id.userPassword);
-        userConfirmPassword = findViewById(R.id.userConfirmPassword);
+
         userPhone = findViewById(R.id.userPhone);
         register = findViewById(R.id.Register);
 
@@ -30,8 +32,42 @@ public class CreateAccountActivity extends AppCompatActivity {
                 userEntity.setEmail(userEmail.getText().toString());
                 userEntity.setPassword(userPassword.getText().toString());
                 userEntity.setPhone(userPhone.getText().toString());
+
+                if (validateInput(userEntity)){
+                    // Do insert Operation
+                    UserDatabase userDatabase = UserDatabase.getUserDatabase(getApplicationContext());
+                    UserDao userDao = userDatabase.userDao();
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            // Register User
+                            userDao.registerUser(userEntity);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getApplicationContext(), "User Registered!", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+                    }).start();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "fill all fields!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
+
+    }
+
+    private Boolean validateInput(UserEntity userEntity) {
+        if (userEntity.getEmail().isEmpty() ||
+            userEntity.getPassword().isEmpty() ||
+            userEntity.getPhone().isEmpty())
+        {
+            return false;
+        }
+        return true;
 
     }
 }
