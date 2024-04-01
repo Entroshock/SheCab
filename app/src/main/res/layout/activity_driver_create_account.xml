@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pink"
-    tools:context="com.example.shecab.CreateAccountActivity">
+    tools:context="com.example.shecab.DriverCreateAccountActivity">
 
 
         <TextView
@@ -24,7 +24,7 @@
             app:layout_constraintVertical_bias="0.042" />
 
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/driveEmail"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
@@ -41,7 +41,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/drivePassword"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
@@ -55,27 +55,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+            app:layout_constraintTop_toBottomOf="@id/driveEmail" />
+
+
 
         <EditText
-            android:id="@+id/editTextConfirmPassword"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/button_background"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
-
-        <EditText
-            android:id="@+id/editTextPhoneNumber"
+            android:id="@+id/drivePhone"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
@@ -89,7 +74,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextConfirmPassword" />
+            app:layout_constraintTop_toBottomOf="@id/drivePassword" />
 
         <TextView
             android:id="@+id/textView5"
@@ -104,7 +89,7 @@
             app:layout_constraintVertical_bias="0.857" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/driveRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
