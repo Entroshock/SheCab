@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- pick-up location input -->
+    <EditText
+        android:id="@+id/pickUpLocationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter pick-up location"
+        android:drawableStart="@drawable/baseline_home_24"
+        android:drawablePadding="10dp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/bg_edittext" />
+
+    <!-- destination input -->
+    <EditText
+        android:id="@+id/destinationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter destination"
+        android:layout_below="@id/pickUpLocationEditText"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/baseline_destination_24"
+    android:drawablePadding="10dp"
+    android:inputType="text"
+    android:padding="12dp"
+    android:background="@drawable/bg_edittext" />
+
+    <!-- confirm button -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/destinationEditText"
+        android:layout_marginTop="24dp"
+        android:text="Confirm"
+        android:backgroundTint="@color/pink"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/destinationEditText"
+        android:layout_marginTop="86dp"
+        android:backgroundTint="@color/pink"
+        android:text="Choose on map" />
+
+
+</RelativeLayout>

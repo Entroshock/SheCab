@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4EC">
+
+    <!-- Top bar with profile icon -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_person_2_24" />
+    </RelativeLayout>
+
+    <!-- Welcome Back Text -->
+    <TextView
+        android:id="@+id/welcomeBackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:text="Hello! welcome back :)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <!-- Main Graphic -->
+    <ImageView
+        android:id="@+id/mainGraphic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeBackText"
+        android:layout_centerInParent="true"
+        android:src="@drawable/mylogo" />
+
+    <!-- Where To Button -->
+    <Button
+        android:id="@+id/whereToButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainGraphic"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/pink"
+        android:text="Where To?"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="#FFFFFF" />
+
+    <!-- Bookings Button -->
+    <TextView
+        android:id="@+id/bookNowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/whereToButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Book Now"
+        android:textColor="#000000" />
+
+    <!-- Bottom navigation or additional buttons can be added here -->
+
+</RelativeLayout>
