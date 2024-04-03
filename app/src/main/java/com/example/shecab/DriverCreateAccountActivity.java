@@ -3,15 +3,18 @@ package com.example.shecab;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DriverCreateAccountActivity extends AppCompatActivity {
 
     EditText driverEmail, driverPassword, driverPhone;
+    TextView loginTextView;
     Button driverRegister;
 
 
@@ -25,6 +28,7 @@ public class DriverCreateAccountActivity extends AppCompatActivity {
 
         driverPhone = findViewById(R.id.drivePhone);
         driverRegister = findViewById(R.id.driveRegister);
+        loginTextView = findViewById(R.id.textView5);
 
         driverRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +62,14 @@ public class DriverCreateAccountActivity extends AppCompatActivity {
                 }
 
 
+            }
+        });
+
+        loginTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(DriverCreateAccountActivity.this, Login.class));
             }
         });
     }

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.SheCab"
         tools:targetApi="34">
         <activity
+            android:name=".DriverAccount"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".settings"
+            android:exported="false" />
+        <activity
+            android:name=".UserAccount"
+            android:exported="false" />
+        <activity
             android:name=".optionscreen"
             android:exported="false" />
         <activity
