@@ -2,16 +2,19 @@ package com.example.shecab;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.shecab.R;
 
 public class CreateAccountActivity extends AppCompatActivity {
     EditText userEmail, userPassword, userPhone;
+    TextView loginTextView;
     Button register;
 
     @Override
@@ -20,6 +23,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_account);
         userEmail = findViewById(R.id.userEmail);
         userPassword = findViewById(R.id.userPassword);
+        loginTextView = findViewById(R.id.textView5);
 
         userPhone = findViewById(R.id.userPhone);
         register = findViewById(R.id.Register);
@@ -55,6 +59,16 @@ public class CreateAccountActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "fill all fields!", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+
+
+        });
+
+        loginTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(CreateAccountActivity.this, Login.class));
             }
         });
 
