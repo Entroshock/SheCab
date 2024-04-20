@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.12" />
 
     <EditText
-        android:id="@+id/userEmail"
+        android:id="@+id/userLoginEmail"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/userPassword"
+        android:id="@+id/userLoginPassword"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -54,16 +54,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userEmail" />
+        app:layout_constraintTop_toBottomOf="@id/userLoginEmail" />
 
     <Button
-        android:id="@+id/buttontwo"
-        android:layout_width="141dp"
-        android:layout_height="65dp"
-        android:backgroundTint="@color/white"
-        android:padding="1dp"
-        android:text="Sign up now"
-        android:textColor="@color/black"
+
+        android:id="@+id/userLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
