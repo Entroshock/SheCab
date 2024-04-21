@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtBookingConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Taxi booked!"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: 20 Euro"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/txtDriverStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driver is on the way!"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:paddingBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnReturnToMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return to Map" />
+</LinearLayout>

@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -49,7 +51,19 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
         if (pickupLocation != null && destinationLocation != null) {
             getDirections(pickupLocation, destinationLocation);
         }
+
+        Button confirmButton = findViewById(R.id.confirmButton);
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toTaxi = new Intent(MapGoogle.this, TaxiOptionsActivity.class);
+                startActivity(toTaxi);
+            }
+        });
+
     }
+
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -199,6 +213,7 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
 
         return poly;
     }
+
 
 
     interface GeocodeListener {
