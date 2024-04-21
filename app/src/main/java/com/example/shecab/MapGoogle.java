@@ -39,7 +39,9 @@ import java.util.ArrayList;
 
 public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
     private GoogleMap gMap;
+    Button confirmButton;
     private LatLng initialFocusLatLng;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,17 +50,17 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        // Get the intent that started this activity
+        confirmButton = findViewById(R.id.confirmButton);
         Intent intent = getIntent();
+        handleIntent(intent); // Process the intent data first
+
         String pickupLocation = intent.getStringExtra("pickup_location");
         String destinationLocation = intent.getStringExtra("destination_location");
 
-        // Assuming a method getDirections which handles the complete flow
         if (pickupLocation != null && destinationLocation != null) {
-            getDirections(pickupLocation, destinationLocation);
+            getDirections(pickupLocation, destinationLocation); // Call getDirections with the correct parameters
         }
 
-        Button confirmButton = findViewById(R.id.confirmButton);
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,10 +68,23 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
                 startActivity(toTaxi);
             }
         });
-
     }
 
+    private void handleIntent(Intent intent) {
+        boolean bookingConfirmed = intent.getBooleanExtra("bookingConfirmed", false);
+        if (bookingConfirmed) {
+            confirmButton.setVisibility(View.GONE);
+        } else {
+            confirmButton.setVisibility(View.VISIBLE);
+        }
+    }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);  // Set the new intent as the activity's intent
+        handleIntent(intent);  // Handle the new intent
+    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -84,6 +99,8 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
             requestLocationPermissions();
         }
     }
+
+
 
     private void setupMapLocation() {
         if (gMap != null) {

@@ -18,12 +18,13 @@ public class BookingConfirmationActivity extends AppCompatActivity {
         btnReturnToMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate back to MapGoogle Activity
                 Intent intent = new Intent(BookingConfirmationActivity.this, MapGoogle.class);
+                intent.putExtra("bookingConfirmed", true);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish(); // Finish this activity
+                finish(); // Finish this activity to prevent return to booking confirmation on back press
             }
         });
+
     }
 }
