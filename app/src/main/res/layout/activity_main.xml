@@ -51,18 +51,32 @@
         app:layout_constraintVertical_bias="0.679" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/driverLoginButton"
         android:layout_width="186dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/pink"
         android:padding="1dp"
-        android:text="Login"
+        android:text="Login as a Driver!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.787" />
+
+    <Button
+        android:id="@+id/userLoginButton"
+        android:layout_width="186dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/pink"
+        android:padding="1dp"
+        android:text="Login as a Passenger!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.859" />
 
     <TextView
         android:id="@+id/textView3"
@@ -73,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <ImageView
         android:id="@+id/imageView"

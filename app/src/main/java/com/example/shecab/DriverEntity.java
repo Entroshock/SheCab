@@ -5,7 +5,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity (tableName = "users")
+@Entity (tableName = "drivers")
 public class DriverEntity {
     @PrimaryKey(autoGenerate = true)
     Integer driverId;
