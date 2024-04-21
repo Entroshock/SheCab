@@ -58,8 +58,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                 else {
                     Toast.makeText(getApplicationContext(), "fill all fields!", Toast.LENGTH_SHORT).show();
                 }
-                Intent toHome = new Intent(CreateAccountActivity.this, Home.class);
-                startActivity(toHome);
+
             }
         });
 
