@@ -73,9 +73,14 @@
         <activity
             android:name=".CreateAccountActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".DriverLogin"
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

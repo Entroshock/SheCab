@@ -56,10 +56,14 @@ public class DriverCreateAccountActivity extends AppCompatActivity {
                             });
                         }
                     }).start();
+
+                    startActivity(new Intent(
+                            DriverCreateAccountActivity.this, DriverLogin.class));
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "fill all fields!", Toast.LENGTH_SHORT).show();
                 }
+
 
 
             }
@@ -69,7 +73,7 @@ public class DriverCreateAccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(DriverCreateAccountActivity.this, Login.class));
+                startActivity(new Intent(DriverCreateAccountActivity.this, DriverLogin.class));
             }
         });
     }

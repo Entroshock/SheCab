@@ -10,6 +10,6 @@ public interface UserDao {
     @Insert
     void registerUser(UserEntity userEntity);
 
-    @Query("SELECT * from users where userEmail=(:userEmail) and userPassword=(:userPassword)")
-    UserEntity login(String userEmail, String userPassword);
+    @Query("SELECT * from users where userEmail=(:userLoginEmail) and userPassword=(:userLoginPassword)")
+    UserEntity login(String userLoginEmail, String userLoginPassword);
 }
