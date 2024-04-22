@@ -29,11 +29,6 @@ public class MapSelect extends AppCompatActivity implements OnMapReadyCallback {
             mapFragment.getMapAsync(this);
         }
 
-        Button mapButton = findViewById(R.id.mapButton);
-        mapButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MapSelect.this, MapGoogle.class);
-            startActivity(intent);
-        });
 
         Button confirmButton = findViewById(R.id.confirmButton);
         boolean isBookingConfirmed = getIntent().getBooleanExtra("bookingConfirmed", false);

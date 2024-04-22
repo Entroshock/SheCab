@@ -42,14 +42,5 @@
         android:backgroundTint="@color/pink"
         android:textColor="#FFFFFF" />
 
-    <Button
-        android:id="@+id/mapButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/destinationEditText"
-        android:layout_marginTop="86dp"
-        android:backgroundTint="@color/pink"
-        android:text="Choose on map" />
-
 
 </RelativeLayout>
