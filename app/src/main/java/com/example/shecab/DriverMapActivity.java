@@ -176,7 +176,7 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
                     .snippet("Destination: " + passenger.destination));
         }
     }
-
+    //Mock Passengers location
     private List<MockPassenger> createMockPassengers() {
         List<MockPassenger> mockPassengers = new ArrayList<>();
         mockPassengers.add(new MockPassenger("Alice", "Museum of Art", new LatLng(34.0522, -118.2437)));
