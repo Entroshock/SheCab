@@ -53,9 +53,9 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
         passengerNameTextView = findViewById(R.id.passengerNameTextView);
         passengerDestinationTextView = findViewById(R.id.passengerDestinationTextView);
 
-        // Initialize price TextView and Button
+        // initialize price TextView and Button
         tripPriceTextView = findViewById(R.id.tripPriceTextView);
-        tripPriceTextView.setText("Trip Price: $10"); // You can dynamically set this based on different factors
+        tripPriceTextView.setText("Trip Price: $10");
 
         Button confirmButton = findViewById(R.id.confirmButton);
         confirmButton.setOnClickListener(v -> {
@@ -63,18 +63,18 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
             navigateToPassenger(currentPassengerLocation);
         });
 
-        // Set OnClickListener for the completeTripButton
+        // set OnClickListener for the completeTripButton
         Button completeTripButton = findViewById(R.id.completeTripButton);
         completeTripButton.setOnClickListener(v -> completeTrip());
     }
 
     private void completeTrip() {
-        // Display a simple toast message when the trip is completed
+        // display a simple toast message when the trip is completed
         Toast.makeText(this, "Trip completed. Displaying fare.", Toast.LENGTH_SHORT).show();
 
-        // Display the trip price
+        // display the trip price
         tripPriceTextView.setText("Trip Price: $10");
-        tripPriceTextView.setVisibility(View.VISIBLE); // Make the price visible
+        tripPriceTextView.setVisibility(View.VISIBLE); // make the price visible
     }
 
 
@@ -218,7 +218,7 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
         }
     }
 
-    // Mock Passenger class
+    // mock Passenger class
     public static class MockPassenger {
         String name;
         String destination;
