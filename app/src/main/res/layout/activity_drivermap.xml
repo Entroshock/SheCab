@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Map Fragment -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- RelativeLayout for passenger info at the bottom -->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutContainingTheTextViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/passengerImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/driverr_removebg_preview" />
+
+        <TextView
+            android:id="@+id/passengerNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/passengerImageView"
+            android:layout_alignTop="@id/passengerImageView"
+            android:layout_marginStart="10dp"
+            android:text="*Passenger's Name*"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/passengerDestinationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/passengerImageView"
+            android:layout_below="@id/passengerNameTextView"
+            android:layout_marginStart="10dp"
+            android:text="*Passenger's destination*"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <!-- Accept Button -->
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passengerDestinationTextView"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="@color/pink"
+            android:text="Accept"
+            android:textColor="#FFFFFF" />
+
+        <!-- Complete Trip Button positioned beside Accept -->
+        <Button
+            android:id="@+id/completeTripButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/confirmButton"
+            android:layout_alignTop="@id/confirmButton"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/pink"
+            android:text="Complete Trip"
+            android:textColor="#FFFFFF" />
+
+        <!-- Price Display -->
+        <TextView
+            android:id="@+id/tripPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirmButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Trip Price: $10"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
