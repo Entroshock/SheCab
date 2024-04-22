@@ -37,6 +37,7 @@ dependencies {
 
     implementation ("androidx.room:room-runtime:2.4.0")
     implementation("androidx.activity:activity:1.8.0")
+    implementation("com.google.android.gms:play-services-location:21.2.0")
     annotationProcessor ("androidx.room:room-compiler:2.4.0")
     implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.appcompat:appcompat:1.6.1")

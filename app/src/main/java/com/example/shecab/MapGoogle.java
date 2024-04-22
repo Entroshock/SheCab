@@ -1,13 +1,21 @@
 package com.example.shecab;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+import com.google.android.gms.location.FusedLocationProviderClient;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -31,7 +39,9 @@ import java.util.ArrayList;
 
 public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
     private GoogleMap gMap;
+    Button confirmButton;
     private LatLng initialFocusLatLng;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,15 +50,40 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        // Get the intent that started this activity
+        confirmButton = findViewById(R.id.confirmButton);
         Intent intent = getIntent();
+        handleIntent(intent); // Process the intent data first
+
         String pickupLocation = intent.getStringExtra("pickup_location");
         String destinationLocation = intent.getStringExtra("destination_location");
 
-        // Assuming a method getDirections which handles the complete flow
         if (pickupLocation != null && destinationLocation != null) {
-            getDirections(pickupLocation, destinationLocation);
+            getDirections(pickupLocation, destinationLocation); // Call getDirections with the correct parameters
         }
+
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toTaxi = new Intent(MapGoogle.this, TaxiOptionsActivity.class);
+                startActivity(toTaxi);
+            }
+        });
+    }
+
+    private void handleIntent(Intent intent) {
+        boolean bookingConfirmed = intent.getBooleanExtra("bookingConfirmed", false);
+        if (bookingConfirmed) {
+            confirmButton.setVisibility(View.GONE);
+        } else {
+            confirmButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);  // Set the new intent as the activity's intent
+        handleIntent(intent);  // Handle the new intent
     }
 
     @Override
@@ -57,7 +92,56 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
         if (initialFocusLatLng != null) {
             gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(initialFocusLatLng, 15));
         }
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            setupMapLocation();
+        } else {
+            requestLocationPermissions();
+        }
     }
+
+
+
+    private void setupMapLocation() {
+        if (gMap != null) {
+            gMap.setMyLocationEnabled(true);
+            gMap.getUiSettings().setMyLocationButtonEnabled(true);
+
+            // Optionally, move the camera to the user's current location
+            moveToCurrentLocation();
+        }
+    }
+
+    private void moveToCurrentLocation() {
+        FusedLocationProviderClient locationClient = LocationServices.getFusedLocationProviderClient(this);
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        locationClient.getLastLocation()
+                .addOnSuccessListener(this, location -> {
+                    if (location != null) {
+                        LatLng currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
+                        gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15));
+                    }
+                });
+    }
+
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (gMap != null) {
+            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
+                setupMapLocation();
+            } else {
+                requestLocationPermissions();  // Make sure this method adequately handles permission requests
+            }
+        }
+    }
+
+
 
     private void getDirections(String originAddress, String destinationAddress) {
         geocodeAddress(originAddress, "Pickup Location", new GeocodeListener() {
@@ -199,6 +283,48 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
 
         return poly;
     }
+
+
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+
+    private void requestLocationPermissions() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION)) {
+            // Show an explanation to the user *asynchronously*
+            new AlertDialog.Builder(this)
+                    .setTitle("Location Permission Needed")
+                    .setMessage("This app needs the Location permission, please accept to use location functionality")
+                    .setPositiveButton("OK", (dialogInterface, i) -> {
+                        //Prompt the user once explanation has been shown
+                        ActivityCompat.requestPermissions(MapGoogle.this,
+                                new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                                LOCATION_PERMISSION_REQUEST_CODE);
+                    })
+                    .create()
+                    .show();
+        } else {
+            // No explanation needed, we can request the permission.
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                    LOCATION_PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission was granted. Setup the map location functionality
+                setupMapLocation();
+            } else {
+                // Permission denied, Disable the functionality that depends on this permission.
+                Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
 
 
     interface GeocodeListener {
