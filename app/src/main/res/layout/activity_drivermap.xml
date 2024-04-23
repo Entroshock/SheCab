@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#FFFFFF"
+        android:background="@color/lightPink"
         android:padding="10dp">
 
         <ImageView
@@ -31,6 +31,7 @@
             android:layout_alignTop="@id/passengerImageView"
             android:layout_marginStart="10dp"
             android:text="*Passenger's Name*"
+            android:fontFamily="@font/baloo_tammudu"
             android:textColor="@android:color/black"
             android:textSize="15sp" />
 
@@ -41,6 +42,7 @@
             android:layout_toEndOf="@id/passengerImageView"
             android:layout_below="@id/passengerNameTextView"
             android:layout_marginStart="10dp"
+            android:fontFamily="@font/baloo_tammudu"
             android:text="*Passenger's destination*"
             android:textColor="@android:color/black"
             android:textSize="15sp" />
@@ -52,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/passengerDestinationTextView"
             android:layout_marginTop="14dp"
+            android:fontFamily="@font/baloo_tammudu"
             android:backgroundTint="@color/pink"
             android:text="Accept"
             android:textColor="#FFFFFF" />
@@ -65,6 +68,7 @@
             android:layout_marginStart="10dp"
             android:backgroundTint="@color/pink"
             android:text="Complete Trip"
+            android:fontFamily="@font/baloo_tammudu"
             android:textColor="#FFFFFF" />
 
         <!-- Price Display -->
