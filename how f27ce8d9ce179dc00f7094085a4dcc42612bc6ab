@@ -1,0 +1,443 @@
+[33mcommit f27ce8d9ce179dc00f7094085a4dcc42612bc6ab[m[33m ([m[1;36mHEAD -> [m[1;32mLaura[m[33m, [m[1;31morigin/Laura[m[33m)[m
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Mon Apr 22 17:13:38 2024 +0200
+
+    small fixes
+
+[33mcommit 254167ab467fc81e6cdb282cf7ef208061c28900[m
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Mon Apr 22 17:00:26 2024 +0200
+
+    small fixes
+
+[33mcommit efd9be033dc6442885f85a174a7ee2c5228ae168[m
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Sun Apr 21 07:38:34 2024 +0200
+
+    Driver Maps
+
+[33mcommit 827857c4b0f17d51001a88568f03c565f6487bda[m
+Merge: 26b6980 76110de
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Mon Apr 22 16:38:34 2024 +0200
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab into HEAD
+
+[33mcommit 76110de02063933a85543bb1ac6154fdb1056551[m[33m ([m[1;31mupstream/master[m[33m)[m
+Merge: e8eee84 6fbeb51
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Mon Apr 22 23:36:54 2024 +0900
+
+    Merge pull request #12 from Entroshock/Alex-Maps
+    
+    removal of confirm on map button since not needed
+
+[33mcommit 6fbeb51817a3b5903c2d6b6068c5ee7e1e865c5f[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Mon Apr 22 15:36:10 2024 +0100
+
+    removal of confirm on map button since not needed
+
+[33mcommit 26b69805c87e7bab4f30496f6d99fdf74c974441[m
+Merge: b4d3e97 e8eee84
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Mon Apr 22 16:22:17 2024 +0200
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab into HEAD
+
+[33mcommit b4d3e97aebef86fab20e5751cd554e66cb2c20fe[m
+Merge: 018a7e0 8aa27f7
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Mon Apr 22 03:40:35 2024 +0200
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab into HEAD
+
+[33mcommit e8eee84af2e9df3008633232c745d86b66a1f106[m
+Author: andrewevnas <you@example.com>
+Date:   Sun Apr 21 23:31:45 2024 +0100
+
+    Full Backend Operational
+
+[33mcommit fc08175e5ffc521a9155dafbc8c3139ca86f2340[m
+Author: andrewevnas <you@example.com>
+Date:   Sun Apr 21 22:22:26 2024 +0100
+
+    Driver Login touches
+
+[33mcommit 9ba2ffc14f76656f239ddd4284d0f278f48d6146[m
+Author: andrewevnas <you@example.com>
+Date:   Sun Apr 21 16:51:58 2024 +0100
+
+    User Login working through
+
+[33mcommit 8aa27f76edb9f12e77712bde0c8958d3c9b05253[m
+Merge: 792a6d9 40a9989
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Sun Apr 21 23:02:19 2024 +0900
+
+    Merge pull request #11 from Entroshock/Alex-Maps-Test
+    
+    Alex maps test
+
+[33mcommit 40a99896337c440aab305090fe0d74cff96e5b15[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Sun Apr 21 15:00:51 2024 +0100
+
+    outcome after booking confirmation v2
+
+[33mcommit 19f136ff5ffb7fd0c85598bd66930fdbdf0185cf[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Sun Apr 21 14:53:12 2024 +0100
+
+    outcome after booking confirmation
+
+[33mcommit 4b0d9cf498def54b4b6525b414836577980e1a74[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Sun Apr 21 08:54:29 2024 +0100
+
+    more map stuff, specifically booking confirmation
+
+[33mcommit 018a7e0a59659f3b03bebc3c2f751edb164d9eea[m
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Tue Apr 16 13:21:14 2024 +0200
+
+    manifest file
+
+[33mcommit 24a057853aa5ce3af438b361ed853a0e9c1009fe[m[33m ([m[1;31mupstream/Alex-Maps-Test[m[33m)[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Sun Apr 21 06:11:59 2024 +0100
+
+    map stuff, letting user book a taxi and showing price
+
+[33mcommit e6de11c845e81c61c590d033d86290cb0a45a9f7[m[33m ([m[1;31mupstream/Alex-Maps[m[33m)[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Sat Apr 20 12:47:53 2024 +0100
+
+    create account clean up and some other stuff
+
+[33mcommit 792a6d9edfa5d69583f80464dddeec2fca314e73[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: fe466ba b898d68
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Sat Apr 20 11:08:52 2024 +0900
+
+    Merge pull request #10 from Entroshock/andrew
+    
+    Andrew Login
+
+[33mcommit b898d68349d3d519c1f61d6ab5020993996a74c5[m[33m ([m[1;31mupstream/andrew[m[33m)[m
+Merge: b8ed2dd fe466ba
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Sat Apr 20 11:06:32 2024 +0900
+
+    Merge branch 'master' into andrew
+
+[33mcommit fe466ba4583b79022a19f0f3f0f320b2531f3ca0[m
+Merge: f9b45e9 d06ac35
+Author: Lauraawei <123452404+Lauraawei@users.noreply.github.com>
+Date:   Tue Apr 16 13:17:12 2024 +0200
+
+    Merge pull request #9 from c21333116/shahidabranch
+    
+    Shahidabranch
+
+[33mcommit d06ac3507611ded915e6aaf43f5f8d1bd8ad19c3[m
+Merge: 38f6261 f9b45e9
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Tue Apr 16 20:15:40 2024 +0900
+
+    Merge branch 'Entroshock:master' into shahidabranch
+
+[33mcommit f9b45e9b1e3026fda131c7c6af1c62248237829e[m
+Merge: 4626e29 a104841
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Tue Apr 16 11:27:31 2024 +0900
+
+    Merge pull request #8 from Entroshock/Alex-Maps
+    
+    Alex maps
+
+[33mcommit b8ed2dd1ac26813c3085f0e807504d5a31f11908[m
+Author: andrewevnas <you@example.com>
+Date:   Tue Apr 16 01:17:00 2024 +0100
+
+    Andrew Login
+
+[33mcommit a104841fc8b833b3cb3a847f962ae01cc5d45446[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Mon Apr 15 14:29:56 2024 +0100
+
+    Google Maps API and Geolocation implementation
+
+[33mcommit 38f626154cfa23714c0427e72e586867fcc6a8e7[m
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Mon Apr 15 20:19:33 2024 +0900
+
+    driver ui
+
+[33mcommit a62fb98cb7dbe321da7d83a925689ebbc36f5c52[m
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Mon Apr 15 20:14:54 2024 +0900
+
+    driver ui
+
+[33mcommit 28b19ee1983635d609986ecd7c4b0029a6abca33[m
+Merge: 361a0fe a0d64d4
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Sun Apr 14 10:21:52 2024 +0900
+
+    Merge branch 'shahidabranch' of https://github.com/c21333116/SheCab into shahidabranch
+
+[33mcommit 361a0fe078ee123cedafe39034e54712d571ac56[m
+Merge: 5c82c0a 4626e29
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Sun Apr 14 10:21:46 2024 +0900
+
+    the verification page
+
+[33mcommit a0d64d43372decb609a6288f0ce8af73962e6870[m
+Merge: 5c82c0a 4626e29
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Fri Apr 12 17:41:49 2024 +0900
+
+    Merge branch 'Entroshock:master' into shahidabranch
+
+[33mcommit 50216cf6581d2801e399cd09f2a6233c87c2acbf[m
+Merge: 82bd3b6 4626e29
+Author: Entroshock <alextsang@live.ie>
+Date:   Thu Apr 11 07:28:35 2024 +0100
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab into Alex-Maps
+
+[33mcommit 4626e29f3f4759c0ce3bc6b7572d4b2c2218ae6c[m
+Merge: 83ddc8a e48ff8f
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Thu Apr 11 15:27:09 2024 +0900
+
+    Merge pull request #7 from Lauraawei/Laura
+    
+    removed booking
+
+[33mcommit e48ff8fff0b011f586a58109f61c00c096299c4a[m
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Wed Apr 10 23:17:58 2024 +0200
+
+    removed booking
+
+[33mcommit 82bd3b65cc6c7235c3df9e0a42b63f2dff6ff107[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Wed Apr 10 11:09:30 2024 +0100
+
+    New branch for more detailed map feature implementation
+
+[33mcommit 83ddc8a255faa77e81339d21185e13935b38351d[m
+Merge: 0cb35f2 8f5fe74
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Wed Apr 10 17:37:13 2024 +0900
+
+    Merge pull request #6 from Entroshock/Alex-API-test
+    
+    Maps basic functionality
+
+[33mcommit 8f5fe7480b444f9e3ce3469a98f260089520e34e[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Wed Apr 10 09:19:07 2024 +0100
+
+    Backend functionality leading to maps page
+    Currently only works on physical version of smartphones, problem with emulator version in relation to play services
+
+[33mcommit f3b1ee95e660c3bcdf4b895d1ac7c7f359de2fd7[m
+Merge: 9ddfdd9 0cb35f2
+Author: Entroshock <alextsang@live.ie>
+Date:   Wed Apr 10 07:14:57 2024 +0100
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab into Alex-API-test
+    
+    # Conflicts:
+    #       app/src/main/AndroidManifest.xml
+
+[33mcommit 9ddfdd9489e3b154eda84185e24bb0e71e8635a7[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Wed Apr 10 07:13:30 2024 +0100
+
+    first commit of branch
+
+[33mcommit 0cb35f2dcedfa61d31c628b811046988562642b3[m
+Merge: c673f34 345a8fc
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Wed Apr 10 15:09:35 2024 +0900
+
+    Merge pull request #5 from Lauraawei/Laura
+    
+    Home screen
+
+[33mcommit 5c82c0ab06bdf99495c93cca19a6d610b48c3ee5[m
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Thu Apr 4 16:57:32 2024 +0900
+
+    login button
+
+[33mcommit 5af8fd1b0e3a902eee4d7f1fee9ad57e262d1b8d[m
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Thu Apr 4 16:55:41 2024 +0900
+
+    login button
+
+[33mcommit 345a8fc0ef037c2399c8ddd7a3e93884b68159e9[m
+Author: Lauraawei <C21371683@mytudublin.ie>
+Date:   Thu Apr 4 00:57:51 2024 +0200
+
+    Home screen
+
+[33mcommit 37dab745142170c7df324a4c5f930562c8d59f3f[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Wed Apr 3 10:26:22 2024 +0100
+
+    first commit of branch
+
+[33mcommit f7ec9a422b3f1bc0304bac016587191b697d9982[m
+Merge: f5ea464 c673f34
+Author: Entroshock <alextsang@live.ie>
+Date:   Wed Apr 3 07:57:00 2024 +0100
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab
+
+[33mcommit c673f34ec3f7d18b47b2262c053ff19e6b0d8756[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: 58726f2 0262fe9
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Wed Apr 3 15:04:10 2024 +0900
+
+    Merge pull request #4 from c21333116/shahidabranch
+    
+    page after creation of account and settingpage
+
+[33mcommit 0262fe90832e4f89ecb7f60e1904914401da8406[m
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Wed Apr 3 15:03:19 2024 +0900
+
+    page after creation of account and settingpage
+
+[33mcommit f5ea4647b728b683ad1abad6e963410673ec37d9[m
+Merge: 14c1a61 58726f2
+Author: Entroshock <alextsang@live.ie>
+Date:   Mon Apr 1 12:27:38 2024 +0100
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab
+
+[33mcommit 58726f2e80b01f557cb1c4936eeccfb668275fef[m
+Merge: 900c05c 8448eaa
+Author: Alex Tsang <123558092+Entroshock@users.noreply.github.com>
+Date:   Thu Mar 28 23:27:35 2024 +0900
+
+    Merge pull request #3 from andrewevnas/master
+    
+    Backend PR
+
+[33mcommit 14c1a61750bb25f0c1b3453c564ded321c9441e9[m
+Merge: ecb53b2 900c05c
+Author: Entroshock <alextsang@live.ie>
+Date:   Thu Mar 28 13:29:55 2024 +0000
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab
+
+[33mcommit 8448eaab48945ad1e6f6203a2ba32cc6a8409529[m
+Author: andrewevnas <you@example.com>
+Date:   Wed Mar 27 17:48:15 2024 +0000
+
+    Andrew backend complete register
+
+[33mcommit 4b280f6260b4ec0f921bca91ee948d13e2e63c73[m
+Author: andrewevnas <you@example.com>
+Date:   Wed Mar 27 17:48:02 2024 +0000
+
+    Andrew backend complete register
+
+[33mcommit beda26281dcc51744dcd64dd84e5de9c417f0f6a[m
+Author: andrewevnas <you@example.com>
+Date:   Wed Mar 27 17:04:18 2024 +0000
+
+    Andrew backend register User/Passenger
+
+[33mcommit 2fceb3155f74381a9b8b6d79b63508c34b3120e0[m
+Author: andrewevnas <you@example.com>
+Date:   Wed Mar 27 16:52:23 2024 +0000
+
+    Andrew backend register User/Passenger
+
+[33mcommit a6eb5c007cd7180a2e1e41424acf55bb1b74e053[m
+Author: andrewevnas <you@example.com>
+Date:   Wed Mar 27 16:26:29 2024 +0000
+
+    Andrew Backend dev 2
+
+[33mcommit 900c05c62a2a8cbeffb8dee59eeda01dfac43158[m
+Merge: 7ed7479 415d20c
+Author: andrewevnas <117490091+andrewevnas@users.noreply.github.com>
+Date:   Tue Mar 26 14:58:02 2024 +0000
+
+    Merge pull request #2 from andrewevnas/andrew
+    
+    Andrew
+
+[33mcommit 415d20c73e4d91a7d059463ba4083cf407d1f1a7[m
+Author: andrewevnas <you@example.com>
+Date:   Tue Mar 26 14:57:19 2024 +0000
+
+    andrew test
+
+[33mcommit 20d9c5304466b323586d0c6ea3a4deb290657c58[m
+Author: andrewevnas <you@example.com>
+Date:   Tue Mar 26 14:56:06 2024 +0000
+
+    andrew test
+
+[33mcommit ecb53b2dbd646bb4bc604f74acda17c0609b6857[m
+Merge: 82283c0 7ed7479
+Author: Entroshock <alextsang@live.ie>
+Date:   Sun Mar 24 05:33:30 2024 +0000
+
+    Merge branch 'master' of https://github.com/Entroshock/SheCab
+
+[33mcommit 82283c0a91c130bd5ca82dd6f31fced5436b6f90[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Sun Mar 24 05:33:22 2024 +0000
+
+    Shahida's work
+
+[33mcommit 7ed7479544b15d150fd8efe7ff722c2b830c249d[m
+Merge: 67a0468 4c2400e
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Sun Mar 24 14:30:33 2024 +0900
+
+    Merge pull request #1 from c21333116/shahidabranch
+    
+    Shahidabranch
+
+[33mcommit 4c2400ed274d5d7763770c9556342e0a903f4326[m
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Sun Mar 24 14:07:54 2024 +0900
+
+    option screen
+
+[33mcommit d22a57b4dc2f2990dc4a8c6b0cfb122d16139022[m
+Author: c21333116 <123654910+c21333116@users.noreply.github.com>
+Date:   Sun Mar 24 12:24:24 2024 +0900
+
+    create driver account
+
+[33mcommit 67a046848b9ebc88b43afa9d42eaa0a4e9690be4[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Wed Mar 20 11:17:43 2024 +0000
+
+    Shahida's work
+
+[33mcommit 92b31a51f30fd46cf753276ecf56affd3676fd9e[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Tue Mar 19 14:38:21 2024 +0000
+
+    Initial Commit
+
+[33mcommit ef6f6aea5c4729cbea19ff72957e37e4bcefb77b[m
+Author: Entroshock <alextsang@live.ie>
+Date:   Sat Mar 9 14:25:17 2024 +0000
+
+    Initial Commit

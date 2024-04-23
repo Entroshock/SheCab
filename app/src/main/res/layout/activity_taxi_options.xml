@@ -3,27 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/lightPink"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/myLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/mylogo"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/buttonEcoTaxi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Eco-Friendly Taxi"
+        android:backgroundTint="@color/pink"
+        android:text="7 seater Taxi"
+        android:fontFamily="@font/baloo_tammudu"
         android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/buttonNormalTaxi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Normal Taxi"
+        android:backgroundTint="@color/pink"
+        android:text="4 seater Taxi"
+        android:fontFamily="@font/baloo_tammudu"
         android:layout_marginBottom="32dp"/>
 
     <Button
         android:id="@+id/buttonConfirmBooking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink"
         android:text="Confirm Booking"
+        android:fontFamily="@font/baloo_tammudu"
+        android:layout_marginBottom="32dp"
         android:enabled="false"/>
 
 </LinearLayout>

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#FFFFFF">
+    android:background="@color/lightPink">
 
     <!-- pick-up location input -->
     <EditText
@@ -13,6 +13,7 @@
         android:hint="Enter pick-up location"
         android:drawableStart="@drawable/baseline_home_24"
         android:drawablePadding="10dp"
+        android:fontFamily="@font/baloo_tammudu"
         android:inputType="text"
         android:padding="12dp"
         android:background="@drawable/bg_edittext" />
@@ -25,11 +26,12 @@
         android:hint="Enter destination"
         android:layout_below="@id/pickUpLocationEditText"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/baloo_tammudu"
         android:drawableStart="@drawable/baseline_destination_24"
-    android:drawablePadding="10dp"
-    android:inputType="text"
-    android:padding="12dp"
-    android:background="@drawable/bg_edittext" />
+        android:drawablePadding="10dp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/bg_edittext" />
 
     <!-- confirm button -->
     <Button
@@ -38,6 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/destinationEditText"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/baloo_tammudu"
         android:text="Confirm"
         android:backgroundTint="@color/pink"
         android:textColor="#FFFFFF" />

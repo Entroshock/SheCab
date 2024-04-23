@@ -1,37 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/lightPink"
     android:padding="16dp">
+
+    <!-- ImageView at the top showing the map -->
+
+    <!-- TextView for the booking confirmation -->
+    <ImageView
+        android:id="@+id/imgTop"
+        android:layout_width="444dp"
+        android:layout_height="217dp"
+        android:src="@drawable/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtBookingConfirmation"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:fontFamily="@font/baloo_tammudu"
         android:text="Taxi booked!"
-        android:textAppearance="?android:textAppearanceLarge" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@color/pink"
+        app:layout_constraintTop_toBottomOf="@id/imgTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
 
+    <!-- ImageView for the driver photo -->
+    <ImageView
+        android:id="@+id/imgmiddle"
+        android:layout_width="98dp"
+        android:layout_height="93dp"
+        android:src="@drawable/driver"
+        app:layout_constraintTop_toBottomOf="@id/txtBookingConfirmation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView for the price information -->
     <TextView
         android:id="@+id/txtPrice"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo_tammudu"
         android:text="Price: 20 Euro"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:padding="16dp" />
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/imgmiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
+    <!-- TextView for the driver status -->
     <TextView
         android:id="@+id/txtDriverStatus"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Driver is on the way!"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:paddingBottom="32dp" />
+        android:fontFamily="@font/baloo_tammudu"
+        android:text="Alice is on the way!"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/txtPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
+    <TextView
+        android:id="@+id/txtDistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5 km away"
+        android:fontFamily="@font/baloo_tammudu"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/txtDriverStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- New TextView for estimated arrival time -->
+    <TextView
+        android:id="@+id/txtArrivalTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Arriving in 15 mins"
+        android:fontFamily="@font/baloo_tammudu"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/txtDistance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to return to the map, now constrained to txtArrivalTime -->
     <Button
         android:id="@+id/btnReturnToMap"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Return to Map" />
-</LinearLayout>
+        android:text="Return to Map"
+        android:backgroundTint="@color/pink"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/baloo_tammudu"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/txtArrivalTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
