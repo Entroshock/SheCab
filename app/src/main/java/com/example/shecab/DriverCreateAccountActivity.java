@@ -54,7 +54,7 @@ public class DriverCreateAccountActivity extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(), "Driver Registered!", Toast.LENGTH_SHORT).show();
                                     //redirect to driversmap page
 //                                    Intent intent = new Intent(DriverCreateAccountActivity.this, DriverMapActivity.class);
-//                                    startActivity(intent);
+//                                   startActivity(intent);
                                 }
                             });
                         }
