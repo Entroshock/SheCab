@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo_tammudu"
-        android:text="Hello Laura! welcome back :)"
+        android:text="Hello Alice! Welcome Back :)"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_below="@id/topBar"
@@ -40,29 +40,29 @@
         android:layout_centerInParent="true"
         android:src="@drawable/mylogo" />
 
-    <!-- where To Button -->
+    <!-- Accept Job Button -->
     <Button
-        android:id="@+id/whereToButton"
+        android:id="@+id/acceptJobButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/mainGraphic"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/pink"
-        android:text="Where To?"
+        android:text="Accept Job"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/baloo_tammudu"
         android:textColor="#FFFFFF" />
 
     <TextView
-        android:id="@+id/womanFavorableText"
+        android:id="@+id/rideInfoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/whereToButton"
+        android:layout_below="@id/acceptJobButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/baloo_tammudu"
-        android:text="Ride with confidence in our woman-centric taxis"
+        android:text="Shine as a female driver, illuminate every mile."
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
