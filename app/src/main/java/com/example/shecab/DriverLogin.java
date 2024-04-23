@@ -54,7 +54,7 @@ public class DriverLogin extends AppCompatActivity {
                             } else {
 
                                 startActivity(new Intent(
-                                        DriverLogin.this, Home.class));
+                                        DriverLogin.this, DriverHome.class));
                             }
                         }
                     }).start();;

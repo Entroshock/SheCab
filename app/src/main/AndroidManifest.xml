@@ -78,6 +78,10 @@
         <activity
             android:name=".DriverLogin"
             android:exported="true"/>
+
+        <activity
+            android:name=".DriverHome"
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
