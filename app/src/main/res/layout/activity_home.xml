@@ -20,50 +20,79 @@
     </RelativeLayout>
 
     <!-- main Graphic -->
+
     <TextView
         android:id="@+id/welcomeBackText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="162dp"
         android:fontFamily="@font/baloo_tammudu"
-        android:text="Hello Laura! welcome back :)"
         android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_below="@id/topBar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp" />
+        android:text="Hello!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <!-- where To Button -->
+
+    <TextView
+        android:id="@+id/welcomeBackText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:gravity="center"
+        android:text="Welcome to safer travel!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <ImageView
         android:id="@+id/mainGraphic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/welcomeBackText"
-        android:layout_centerInParent="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="42dp"
         android:src="@drawable/mylogo" />
 
-    <!-- where To Button -->
     <Button
         android:id="@+id/whereToButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mainGraphic"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/pink"
-        android:text="Where To?"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="495dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="185dp"
+        android:backgroundTint="@color/pink"
         android:fontFamily="@font/baloo_tammudu"
+        android:text="Where To?"
         android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/womanFavorableText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/whereToButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="121dp"
         android:fontFamily="@font/baloo_tammudu"
-        android:text="Ride with confidence in our woman-centric taxis"
         android:gravity="center"
+        android:text="Ride with confidence in our woman-centric taxis"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 </RelativeLayout>
