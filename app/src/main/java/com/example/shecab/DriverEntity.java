@@ -19,6 +19,11 @@ public class DriverEntity {
     @ColumnInfo(name = "driverPhone")
     String driverPhone;
 
+
+
+    @ColumnInfo (name = "photoID")
+    public byte[] photoID;
+
     public String getDriverPassword() {
         return driverPassword;
     }
@@ -41,5 +46,13 @@ public class DriverEntity {
 
     public void setDriverPhone(String driverPhone) {
         this.driverPhone = driverPhone;
+    }
+
+    public byte[] getPhotoID() {
+        return photoID;
+    }
+
+    public void setPhotoID(byte[] photoID) {
+        this.photoID = photoID;
     }
 }
