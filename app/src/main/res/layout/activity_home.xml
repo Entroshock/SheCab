@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="#FCE4EC">
 
-    <!-- top bar with profile icon -->
     <RelativeLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -18,8 +17,6 @@
             android:layout_alignParentEnd="true"
             android:src="@drawable/baseline_person_2_24" />
     </RelativeLayout>
-
-    <!-- main Graphic -->
 
     <TextView
         android:id="@+id/welcomeBackText"
@@ -36,7 +33,6 @@
         android:text="Hello!"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <!-- where To Button -->
 
     <TextView
         android:id="@+id/welcomeBackText2"

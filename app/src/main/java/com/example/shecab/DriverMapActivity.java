@@ -44,19 +44,27 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drivermap);
 
+        // initialize the map fragment and other componenets too
         FragmentManager fragmentManager = getSupportFragmentManager();
         SupportMapFragment mapFragment = (SupportMapFragment) fragmentManager.findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        // initialize fusedLocationProviderClient
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
+        // find TextViews for passenger name and destination
         passengerNameTextView = findViewById(R.id.passengerNameTextView);
         passengerDestinationTextView = findViewById(R.id.passengerDestinationTextView);
 
-        // initialize price TextView and Button
+        // set default text for passenger name and destination
+        passengerNameTextView.setText(getString(R.string.passenger_prefix));
+        passengerDestinationTextView.setText(getString(R.string.destination_prefix));
+
+        // initialize trip price textView and Button
         tripPriceTextView = findViewById(R.id.tripPriceTextView);
         tripPriceTextView.setText("Trip Price: $10");
 
+        // set OnClickListener for the confirmButton
         Button confirmButton = findViewById(R.id.confirmButton);
         confirmButton.setOnClickListener(v -> {
             Toast.makeText(this, "Accepted ride to " + passengerDestinationTextView.getText(), Toast.LENGTH_SHORT).show();
@@ -68,13 +76,14 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
         completeTripButton.setOnClickListener(v -> completeTrip());
     }
 
+
     private void completeTrip() {
-        // display a simple toast message when the trip is completed
+        // display a simple toast message
         Toast.makeText(this, "Trip completed. Displaying fare.", Toast.LENGTH_SHORT).show();
 
         // display the trip price
-        tripPriceTextView.setText("Trip Price: $10");
-        tripPriceTextView.setVisibility(View.VISIBLE); // make the price visible
+        tripPriceTextView.setText("Trip Price: €16");
+        tripPriceTextView.setVisibility(View.VISIBLE); // Make the price visible
     }
 
 
@@ -106,7 +115,14 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
 
         mMap.clear();
 
-        passengerMarker = mMap.addMarker(new MarkerOptions().position(passengerMarker.getPosition()).title(passengerMarker.getTitle()));
+        // getting back original snippet before clearing the map and recreating the marker
+        String originalSnippet = passengerMarker.getSnippet();
+
+        // recreate the marker while preserving
+        passengerMarker = mMap.addMarker(new MarkerOptions()
+                .position(passengerMarker.getPosition())
+                .title(passengerMarker.getTitle())
+                .snippet(originalSnippet));
 
         PolylineOptions options = new PolylineOptions()
                 .add(currentLocationMarker.getPosition())
@@ -114,6 +130,7 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
 
         mMap.addPolyline(options);
 
+        // set both passenger's name and destination in corresponding TextViews
         passengerNameTextView.setText(passengerMarker.getTitle());
         passengerDestinationTextView.setText(passengerMarker.getSnippet());
 
@@ -124,15 +141,54 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
         showAcceptRouteDialog(passengerMarker);
     }
 
+
     private void showAcceptRouteDialog(Marker passengerMarker) {
+        String passengerName = passengerMarker.getTitle().replace("Passenger: ", "");
+        String passengerDestination = passengerMarker.getSnippet().replace("Destination: ", "");
+        String message = String.format("Navigate to %s at %s?\nDistance: 2 km - ETA: 5 mins", passengerName, passengerDestination);
+
         new AlertDialog.Builder(this)
                 .setTitle("Confirm Route")
-                .setMessage("Do you want to navigate to " + passengerMarker.getTitle() + "?")
-                .setPositiveButton("Accept", (dialog, which) -> {
+                .setMessage(message)
+                .setPositiveButton("Start Navigation", (dialog, which) -> {
                     navigateToPassenger(passengerMarker.getPosition());
                 })
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton("View Route", (dialog, which) -> {
+                    showRouteOnMap(passengerMarker);
+                })
+                .setNeutralButton("Cancel", (dialog, which) -> {
+                    restoreMapWithAllMarkers();
+                    clearPassengerInfo(); // clear passenger info when Cancel is clicked
+                })
                 .show();
+    }
+
+    private void clearPassengerInfo() {
+        // get references to the TextViews
+        TextView passengerNameTextView = findViewById(R.id.passengerNameTextView);
+        TextView passengerDestinationTextView = findViewById(R.id.passengerDestinationTextView);
+
+        passengerNameTextView.setText(getString(R.string.passenger_prefix));
+        passengerDestinationTextView.setText(getString(R.string.destination_prefix));
+    }
+
+
+
+
+    private void showRouteOnMap(Marker passengerMarker) {
+        // logic to visually display the route on the map without starting navigation
+    }
+
+    private void restoreMapWithAllMarkers() {
+        mMap.clear(); // Clearing all current markers and polylines
+        addMockPassengers(); //adding again all mock passenger markers
+        if (currentLocationMarker != null) {
+            // adding again the driver's current location marker
+            mMap.addMarker(new MarkerOptions()
+                    .position(currentLocationMarker.getPosition())
+                    .title("Your Location"));
+        }
+        Toast.makeText(this, "Route canceled.", Toast.LENGTH_SHORT).show();
     }
 
     private void navigateToPassenger(LatLng passengerLocation) {
@@ -172,11 +228,12 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
         for (MockPassenger passenger : passengers) {
             mMap.addMarker(new MarkerOptions()
                     .position(passenger.location)
-                    .title(passenger.name)
+                    .title("Passenger: " + passenger.name)
                     .snippet("Destination: " + passenger.destination));
         }
     }
-    //Mock Passengers locationgit
+
+    //list of mock passengers
     private List<MockPassenger> createMockPassengers() {
         List<MockPassenger> mockPassengers = new ArrayList<>();
         mockPassengers.add(new MockPassenger("Alice", "Museum of Art", new LatLng(34.0522, -118.2437)));
@@ -208,6 +265,7 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
         return mockPassengers;
     }
 
+    //permission
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -218,7 +276,7 @@ public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCa
         }
     }
 
-    // mock Passenger class
+    // Mock Passenger class
     public static class MockPassenger {
         String name;
         String destination;

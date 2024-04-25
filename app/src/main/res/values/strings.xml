@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SheCab</string>
+    <string name="passenger_prefix">Passenger:</string>
+    <string name="destination_prefix">Destination:</string>
 </resources>
