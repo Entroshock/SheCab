@@ -2,7 +2,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Map Fragment -->
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -30,7 +29,6 @@
             android:layout_toEndOf="@id/passengerImageView"
             android:layout_alignTop="@id/passengerImageView"
             android:layout_marginStart="10dp"
-            android:text="*Passenger's Name*"
             android:fontFamily="@font/baloo_tammudu"
             android:textColor="@android:color/black"
             android:textSize="15sp" />
@@ -43,11 +41,10 @@
             android:layout_below="@id/passengerNameTextView"
             android:layout_marginStart="10dp"
             android:fontFamily="@font/baloo_tammudu"
-            android:text="*Passenger's destination*"
             android:textColor="@android:color/black"
             android:textSize="15sp" />
 
-        <!-- Accept Button -->
+        <!-- start button -->
         <Button
             android:id="@+id/confirmButton"
             android:layout_width="wrap_content"
@@ -56,7 +53,7 @@
             android:layout_marginTop="14dp"
             android:fontFamily="@font/baloo_tammudu"
             android:backgroundTint="@color/pink"
-            android:text="Accept"
+            android:text="Start"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -71,7 +68,7 @@
             android:fontFamily="@font/baloo_tammudu"
             android:textColor="#FFFFFF" />
 
-        <!-- Price Display -->
+        <!-- price Display -->
         <TextView
             android:id="@+id/tripPriceTextView"
             android:layout_width="wrap_content"
@@ -79,7 +76,8 @@
             android:layout_below="@id/confirmButton"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="Trip Price: $10"
+            android:text="Trip Price: €16"
+            android:fontFamily="@font/baloo_tammudu"
             android:textSize="18sp"
             android:textColor="@android:color/black"
             android:visibility="gone"/>

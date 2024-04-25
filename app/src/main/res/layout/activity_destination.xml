@@ -5,7 +5,6 @@
     android:padding="16dp"
     android:background="@color/lightPink">
 
-    <!-- pick-up location input -->
     <EditText
         android:id="@+id/pickUpLocationEditText"
         android:layout_width="match_parent"
@@ -18,7 +17,6 @@
         android:padding="12dp"
         android:background="@drawable/bg_edittext" />
 
-    <!-- destination input -->
     <EditText
         android:id="@+id/destinationEditText"
         android:layout_width="match_parent"
@@ -33,7 +31,6 @@
         android:padding="12dp"
         android:background="@drawable/bg_edittext" />
 
-    <!-- confirm button -->
     <Button
         android:id="@+id/confirmButton"
         android:layout_width="match_parent"

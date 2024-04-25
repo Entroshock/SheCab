@@ -7,9 +7,6 @@
     android:background="@color/lightPink"
     android:padding="16dp">
 
-    <!-- ImageView at the top showing the map -->
-
-    <!-- TextView for the booking confirmation -->
     <ImageView
         android:id="@+id/imgTop"
         android:layout_width="444dp"
@@ -35,7 +32,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
 
-    <!-- ImageView for the driver photo -->
     <ImageView
         android:id="@+id/imgmiddle"
         android:layout_width="98dp"
@@ -46,7 +42,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- TextView for the price information -->
     <TextView
         android:id="@+id/txtPrice"
         android:layout_width="0dp"
@@ -60,7 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- TextView for the driver status -->
     <TextView
         android:id="@+id/txtDriverStatus"
         android:layout_width="0dp"
@@ -87,7 +81,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- New TextView for estimated arrival time -->
     <TextView
         android:id="@+id/txtArrivalTime"
         android:layout_width="0dp"
@@ -101,7 +94,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp" />
 
-    <!-- Button to return to the map, now constrained to txtArrivalTime -->
     <Button
         android:id="@+id/btnReturnToMap"
         android:layout_width="wrap_content"
