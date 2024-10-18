@@ -3,10 +3,10 @@
 ## Introduction
 SheCab is a rideshare application designed to provide safe and reliable taxi services exclusively for women.
 
-## Contributors 
--  Alex Tsang 
-- [Andrew Evans ](https://github.com/andrewevnas)
-- [Laura Wei ](https://github.com/Lauraawei)
-- [Shahida Mohammed ](https://github.com/c21333116)
+## Contributors and roles
+-  Alex Tsang - Team Lead
+- [Andrew Evans ](https://github.com/andrewevnas) - Backend Developer
+- [Laura Wei ](https://github.com/Lauraawei) - Backend Developer
+- [Shahida Mohammed ](https://github.com/c21333116)  - UI Designer/Tester
 
 
