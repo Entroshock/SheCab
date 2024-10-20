@@ -178,7 +178,7 @@ public class MapGoogle extends AppCompatActivity implements OnMapReadyCallback {
 
     private void geocodeAddress(String address, String title, GeocodeListener listener) {
         String baseUrl = "https://maps.googleapis.com/maps/api/geocode/json";
-        String apiKey = "AIzaSyDRf4jd99D3ZtEmOaQQKXUjZ6DezfA4cD8"; // Securely store and use your API key
+        String apiKey = "Your API Key Here"; // Securely store and use your API key(Key has been deleted
         String url = baseUrl + "?address=" + Uri.encode(address) + "&key=" + apiKey;
 
         RequestQueue queue = Volley.newRequestQueue(this);
